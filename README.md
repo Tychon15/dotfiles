@@ -1,17 +1,12 @@
 <p align="center">
   <b>
+    
     ┌──────────────────────────────────────┐
-    
-    │                                      │
-    
-    │          . d o t d o t .             │
-    
-    │                                      │
-    
-    │       my personal hyprland rice      │
-    
-    │                                      │
-    
+    │                                      │    
+    │          . d o t d o t .             │    
+    │                                      │    
+    │       my personal hyprland rice      │    
+    │                                      │    
     └──────────────────────────────────────┘
   </b>
 </p>
