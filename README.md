@@ -1,7 +1,5 @@
-<p align="center">
 # dotfiles
 Dotfiles for my arch based hyprland rice.
-</p>
 
 <p align="center">
   <a href="#-overview">Overview</a> &nbsp;&bull;&nbsp;
