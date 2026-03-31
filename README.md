@@ -1,12 +1,11 @@
 # dotfiles
 Dotfiles for my arch based hyprland rice.
 
-<p align="center">
-  <a href="#-overview">Overview</a> &nbsp;&bull;&nbsp;
-  <a href="#-dependencies">Dependencies</a> &nbsp;&bull;&nbsp;
-  <a href="#-installation">Installation</a> &nbsp;&bull;&nbsp;
-  <a href="#-keybinds">Keybinds</a>
-</p>
+<a href="#-overview">Overview</a> &nbsp;&bull;&nbsp;
+<a href="#-dependencies">Dependencies</a> &nbsp;&bull;&nbsp;
+<a href="#-installation">Installation</a> &nbsp;&bull;&nbsp;
+<a href="#-keybinds">Keybinds</a>
+
 
 ---
 
