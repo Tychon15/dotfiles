@@ -1,14 +1,6 @@
 <p align="center">
-  <b>
-    
-    ┌──────────────────────────────────────┐
-    │                                      │    
-    │          . d o t d o t .             │    
-    │                                      │    
-    │       my personal hyprland rice      │    
-    │                                      │    
-    └──────────────────────────────────────┘
-  </b>
+# dotfiles
+Dotfiles for my arch based hyprland rice.
 </p>
 
 <p align="center">
