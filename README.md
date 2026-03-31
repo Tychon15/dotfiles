@@ -2,9 +2,9 @@
   <b>
     ┌──────────────────────────────────────┐
     │                                      │
-    │         . d o t d o t .              │
+    │          . d o t d o t .             │
     │                                      │
-    │      hyprland rice on arch linux     │
+    │       my personal hyprland rice      │
     │                                      │
     └──────────────────────────────────────┘
   </b>
@@ -14,8 +14,7 @@
   <a href="#-overview">Overview</a> &nbsp;&bull;&nbsp;
   <a href="#-dependencies">Dependencies</a> &nbsp;&bull;&nbsp;
   <a href="#-installation">Installation</a> &nbsp;&bull;&nbsp;
-  <a href="#-keybinds">Keybinds</a> &nbsp;&bull;&nbsp;
-  <a href="#-structure">Structure</a>
+  <a href="#-keybinds">Keybinds</a>
 </p>
 
 ---
@@ -32,12 +31,6 @@
 | **Wallpaper** | [swww](https://github.com/LGFae/swww) + [pywal](https://github.com/dylanaraps/pywal) |
 | **Fetch** | [Fastfetch](https://github.com/fastfetch-cli/fastfetch) |
 | **Music Module** | [waybar-module-music](https://github.com/Someon1e/waybar-module-music) |
-
-Wallpapers are managed through a wallpaper picker script that uses `wofi` + `swww` and automatically generates a system-wide color scheme via `pywal`. Colors propagate to kitty, rofi, cava, swaync, and Firefox (via pywalfox).
-
-Waybar ships with **4 themes** — `default`, `experimental`, `line`, and `zen` — switchable via included scripts.
-
----
 
 ### ~ Dependencies
 
@@ -73,9 +66,6 @@ waybar-module-music
 ```
 hyprshot swayosd-git waybar-module-music
 ```
-
-> [!NOTE]
-> This setup runs on **Arch Linux** with **CachyOS kernel**. Install with your preferred AUR helper (e.g. `yay`).
 
 **One-liner (yay):**
 
@@ -159,61 +149,6 @@ hyprctl reload
 | `SUPER + S` | Scratchpad |
 | `SUPER + 1-0` | Switch workspace |
 | `SUPER + SHIFT + 1-0` | Move window to workspace |
-
----
-
-### ~ Structure
-
-```
-dotdot/
-├── fastfetch/           # terminal fetch configs
-│   ├── config.jsonc
-│   └── config1.jsonc
-├── hypr/                # hyprland configuration
-│   ├── hyprland.conf    # main config
-│   ├── hypridle.conf
-│   ├── hyprlock.conf
-│   ├── colors.conf      # pywal-generated colors
-│   ├── wallpaper.sh     # wallpaper picker + pywal integration
-│   ├── configs/         # modular sub-configs
-│   │   ├── keybinds.conf
-│   │   ├── input.conf
-│   │   ├── looknfeel.conf
-│   │   ├── tags.conf
-│   │   ├── UserAnimations.conf
-│   │   └── windowrules.conf
-│   └── scripts/         # utility scripts
-│       ├── brightness.sh
-│       ├── volume.sh
-│       ├── screenshot.sh
-│       ├── WaybarLayout.sh
-│       ├── WaybarStyles.sh
-│       └── ...
-├── kitty/               # terminal emulator
-│   └── kitty.conf
-├── rofi/                # app launcher & power menus
-│   ├── config.rasi
-│   ├── colors/          # 16 color themes
-│   ├── applets/
-│   ├── launchers/       # 7 launcher styles
-│   └── powermenu/       # 6 powermenu styles
-├── swaync/              # notification center
-│   ├── config.json
-│   ├── style.css
-│   └── refresh.sh
-├── wal/                 # pywal templates & colorschemes
-│   ├── templates/
-│   ├── colorschemes/
-│   └── wal
-├── waybar/              # status bar
-│   ├── config
-│   ├── style.css
-│   ├── scripts/
-│   ├── assets/
-│   └── themes/          # default, experimental, line, zen
-└── waybar-module-music/ # mpris music widget
-    └── config.toml
-```
 
 ---
 
