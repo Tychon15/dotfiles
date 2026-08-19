@@ -21,6 +21,10 @@ Dotfiles for my arch based hyprland rice.
 | **Wallpaper** | [swww](https://github.com/LGFae/swww) + [pywal](https://github.com/dylanaraps/pywal) |
 | **Fetch** | [Fastfetch](https://github.com/fastfetch-cli/fastfetch) |
 | **Music Module** | [waybar-module-music](https://github.com/Someon1e/waybar-module-music) |
+| **Audio Visualizer** | [Cava](https://github.com/karlstav/cava) |
+| **System Monitor** | [Btop](https://github.com/aristocratos/btop) |
+| **Shell** | [Zsh](https://www.zsh.org/) + [Oh My Zsh](https://ohmyz.sh/) + [Powerlevel10k](https://github.com/romkatv/powerlevel10k) |
+| **GTK Theme** | GTK 3.0 |
 
 ### ~ Dependencies
 
@@ -29,6 +33,7 @@ Dotfiles for my arch based hyprland rice.
 ```
 hyprland hyprpaper hypridle hyprlock hyprshot
 waybar kitty rofi swaync
+zsh oh-my-zsh-git zsh-theme-powerlevel10k
 ```
 
 **Wallpaper & Theming:**
@@ -42,7 +47,7 @@ swww python-pywal pywalfox wofi
 ```
 fastfetch playerctl brightnessctl blueman
 networkmanager dolphin grim slurp
-swayosd cava wpctl (wireplumber)
+swayosd cava btop wpctl (wireplumber)
 ```
 
 **Waybar extras:**
@@ -62,8 +67,9 @@ hyprshot swayosd-git waybar-module-music
 ```bash
 yay -S --needed hyprland hyprpaper hypridle hyprlock hyprshot \
   waybar kitty rofi swaync swww python-pywal pywalfox wofi \
+  zsh oh-my-zsh-git zsh-theme-powerlevel10k \
   fastfetch playerctl brightnessctl blueman dolphin grim slurp \
-  swayosd-git cava wireplumber waybar-module-music
+  swayosd-git cava btop wireplumber waybar-module-music
 ```
 
 ---
@@ -73,14 +79,14 @@ yay -S --needed hyprland hyprpaper hypridle hyprlock hyprshot \
 **1. Clone the repo:**
 
 ```bash
-git clone https://github.com/<your-username>/dotdot.git ~/dotdot
+git clone https://github.com/Tychon15/dotfiles.git ~/dotfiles
 ```
 
 **2. Back up your existing configs (recommended):**
 
 ```bash
 mkdir -p ~/.config/backup
-for dir in hypr fastfetch kitty rofi swaync wal waybar waybar-module-music; do
+for dir in hypr fastfetch kitty rofi swaync wal waybar waybar-module-music cava btop gtk-3.0; do
   [ -d ~/.config/$dir ] && cp -r ~/.config/$dir ~/.config/backup/
 done
 ```
@@ -88,10 +94,14 @@ done
 **3. Symlink everything into `~/.config/`:**
 
 ```bash
-cd ~/dotdot
-for dir in hypr fastfetch kitty rofi swaync wal waybar waybar-module-music; do
+cd ~/dotfiles
+for dir in hypr fastfetch kitty rofi swaync wal waybar waybar-module-music cava btop gtk-3.0; do
   ln -sf "$(pwd)/$dir" ~/.config/$dir
 done
+
+# Shell configs (symlink to home directory)
+ln -sf "$(pwd)/.zshrc" ~/.zshrc
+ln -sf "$(pwd)/.p10k.zsh" ~/.p10k.zsh
 ```
 
 > [!IMPORTANT]
@@ -100,13 +110,13 @@ done
 **4. Make scripts executable:**
 
 ```bash
-chmod +x ~/dotdot/hypr/scripts/*.sh
-chmod +x ~/dotdot/hypr/wallpaper.sh
-chmod +x ~/dotdot/rofi/launchers/*/launcher.sh
-chmod +x ~/dotdot/rofi/powermenu/*/powermenu.sh
-chmod +x ~/dotdot/rofi/applets/bin/*.sh
-chmod +x ~/dotdot/waybar/scripts/*.sh
-chmod +x ~/dotdot/swaync/refresh.sh
+chmod +x ~/dotfiles/hypr/scripts/*.sh
+chmod +x ~/dotfiles/hypr/wallpaper.sh
+chmod +x ~/dotfiles/rofi/launchers/*/launcher.sh
+chmod +x ~/dotfiles/rofi/powermenu/*/powermenu.sh
+chmod +x ~/dotfiles/rofi/applets/bin/*.sh
+chmod +x ~/dotfiles/waybar/scripts/*.sh
+chmod +x ~/dotfiles/swaync/refresh.sh
 ```
 
 **5. Set up wallpapers directory:**

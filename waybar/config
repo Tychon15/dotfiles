@@ -4,7 +4,7 @@
         "reload_style_on_change": true,
         "modules-left": ["hyprland/workspaces","custom/pacman","tray","mpris"],
         "modules-center": ["clock"],
-        "modules-right": ["group/expand","bluetooth","network","battery","custom/screenshot","custom/notification","custom/power"],
+        "modules-right": ["group/expand","bluetooth","battery","custom/screenshot","custom/notification"],
 
 
         "hyprland/workspaces": {
@@ -83,7 +83,7 @@
             ],
         },
         "custom/pacman": {
-            "format": "󰅢   {}",
+            "format": "󰅢 {}",
             "interval": 300,   
             "exec": "checkupdates | wc -l",
             "exec-if": "exit 0",
