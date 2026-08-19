@@ -6,6 +6,7 @@ Dotfiles for my arch based hyprland rice.
 <a href="#-installation">Installation</a> &nbsp;&bull;&nbsp;
 <a href="#-keybinds">Keybinds</a>
 
+![preview](preview.png)
 
 ---
 
